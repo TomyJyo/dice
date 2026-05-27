@@ -9,6 +9,7 @@ input.onButtonPressed(Button.A, function () {
             . # # # .
             . . . . .
             `)
+        music.play(music.tonePlayable(523, music.beat(BeatFraction.Quarter)), music.PlaybackMode.UntilDone)
     } else {
         int_1or2 = 2
         basic.showLeds(`
@@ -18,6 +19,9 @@ input.onButtonPressed(Button.A, function () {
             # . # . .
             # # # . .
             `)
+        music.play(music.tonePlayable(262, music.beat(BeatFraction.Quarter)), music.PlaybackMode.UntilDone)
+        music.rest(music.beat(BeatFraction.Quarter))
+        music.play(music.tonePlayable(262, music.beat(BeatFraction.Quarter)), music.PlaybackMode.UntilDone)
     }
 })
 input.onButtonPressed(Button.B, function () {
@@ -46,3 +50,6 @@ basic.showLeds(`
     # . # . .
     # # # . .
     `)
+music.play(music.tonePlayable(262, music.beat(BeatFraction.Quarter)), music.PlaybackMode.UntilDone)
+music.rest(music.beat(BeatFraction.Quarter))
+music.play(music.tonePlayable(262, music.beat(BeatFraction.Quarter)), music.PlaybackMode.UntilDone)
